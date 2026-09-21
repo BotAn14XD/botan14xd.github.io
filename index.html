@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BotAn14XD — Projects & Tactical Compendiums</title>
+  <title>BotAn14XD — Projects, Tactical Compendiums & Localization</title>
   <style>
     :root {
       --bg: #0b1120;
@@ -33,13 +33,14 @@
     }
     header { margin-bottom: 2.5rem; }
     h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 0.5rem; letter-spacing: -0.02em; }
-    p.lead { color: var(--text-muted); font-size: 1.05rem; max-width: 700px; }
+    h2.section-title { font-size: 1.5rem; font-weight: 700; margin: 3rem 0 1.2rem; color: #fff; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+    p.lead { color: var(--text-muted); font-size: 1.05rem; max-width: 750px; }
     
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 1.5rem;
-      margin-top: 2rem;
+      margin-top: 1.5rem;
     }
     .card {
       background: var(--card-bg);
@@ -56,8 +57,8 @@
       border-color: var(--accent);
       background: var(--card-hover);
     }
-    .card h2 { font-size: 1.3rem; margin-bottom: 0.6rem; color: #fff; }
-    .card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; }
+    .card h2, .card h3 { font-size: 1.25rem; margin-bottom: 0.6rem; color: #fff; }
+    .card p { color: var(--text-muted); font-size: 0.92rem; margin-bottom: 1.2rem; }
     .card a.btn {
       display: inline-block;
       align-self: flex-start;
@@ -71,6 +72,67 @@
     }
     .card a.btn:hover { background: #7dd3fc; }
 
+    .card img.banner {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 5;
+      object-fit: cover;
+      border-radius: 8px;
+      display: block;
+      margin-bottom: 1.2rem;
+    }
+
+    /* Localization Mini Grid */
+    .loc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.2rem;
+    }
+    .loc-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .loc-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--accent);
+      background: rgba(56, 189, 248, 0.1);
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      margin-bottom: 0.6rem;
+      align-self: flex-start;
+    }
+    .loc-card h3 { font-size: 1.15rem; color: #fff; margin-bottom: 0.4rem; }
+    .loc-card p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 1rem; }
+
+    /* Contact Chips */
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #1e293b;
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      padding: 0.45rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      text-decoration: none;
+      transition: border-color 0.2s;
+    }
+    .chip:hover { border-color: var(--accent); color: var(--accent); }
+
     footer {
       border-top: 1px solid var(--border);
       padding: 2rem 1.5rem;
@@ -81,34 +143,31 @@
     footer a { color: var(--accent); text-decoration: none; }
     footer a:hover { text-decoration: underline; }
 
-    .card img {
-      width: 100%;
-      height: auto;
-      aspect-ratio: 16 / 5;
-      object-fit: cover;
-      border-radius: 8px;
-      display: block;
-      margin-bottom: 1.2rem;
+    .game-link{
+      color:white;
+      font-weight: bold;
     }
-    
+
   </style>
 </head>
 <body>
   <main class="content">
     <header>
       <h1>BotAn Hub</h1>
-      <p class="lead">Open-source documentation, tactical game mechanics analysis, mathematical damage modeling and data automation utilities.</p>
+      <p class="lead">Open-source documentation, tactical game mechanics analysis, spreadsheet data automation, and professional video game localization.</p>
     </header>
 
+    <!-- Section 1: Tactical Games & Compendiums -->
+    <h2 class="section-title">Tactical Research & Database Systems</h2>
     <div class="grid">
       <div class="card">
         <div>
-          <img src="/BD2-Overview/assets/images/site-assets/banner.avif">
+          <img class="banner" src="https://botan14xd.github.io/BD2-Overview/assets/images/site-assets/banner.avif" alt="Tactical Compendium Banner">
           <h2>Brown Dust II: Tactical Compendium</h2>
           <ul style="color: var(--text-muted); font-size: 0.85rem; margin: 0.8rem 0 1.2rem; padding-left: 1.2rem;">
             <li>Step-by-step beginner progression roadmaps and banner pull recommendations</li>
             <li>Mathematical descriptions of mechanics (Damage, Territory System, Rapport)</li>
-            <li>Interactive web tools for Fiend Hunter, Territory and Rapport Systems.</li>
+            <li>Interactive web tools for Fiend Hunter, Territory, and Rapport Systems</li>
           </ul>
         </div>
         <a href="/BD2-Overview/" class="btn">Explore Compendium →</a>
@@ -116,20 +175,119 @@
 
       <div class="card">
         <div>
-          <img src="/BD2-Overview/assets/images/site-assets/sheets-banner.avif">
+          <img class="banner" src="https://botan14xd.github.io/BD2-Overview/assets/images/site-assets/sheets-banner.avif" alt="Spreadsheets Banner">
           <h2>Brown Dust II Spreadsheets</h2>
-          <p>Spreadsheet-driven databases for Brown Dust II.</p>
+          <p>Spreadsheet-driven databases for Brown Dust II reverse-engineering and event analytics.</p>
           <ul style="color: var(--text-muted); font-size: 0.85rem; margin: 0.8rem 0 1.2rem; padding-left: 1.2rem;">
-            <li>Lore Data</li>
-            <li>Fishing Data</li>
-            <li>P2W Packages Efficiency Chart</li>
-            <li>Tower of Salvation Artifact & Events Data</li>
-            <li>Story Trascript</li>
-            <li>Achievement List</li>
-            <li>Other Miscellaneous Data</li>
+            <li>Game Lore Archives & Dialogue Transcripts</li>
+            <li>Fishing Mechanics & Drop Rates</li>
+            <li>In-Game Shop & P2W Package Efficiency Calculations</li>
+            <li>Tower of Salvation Artifact & Encounter Logs</li>
+            <li>Player Achievement Tracking & Milestone Progress</li>
           </ul>
         </div>
         <a href="https://docs.google.com/spreadsheets/d/14S1ry3hblNeOZgmkk3VLdjNv8LERnrdzQ26V-ecc5Yk/edit?gid=0#gid=0" class="btn" target="_blank" rel="noopener">Check Google Spreadsheets →</a>
+      </div>
+    </div>
+
+    <!-- Section: Infographics & Design Archive -->
+    <h2 class="section-title">Information Design & Infographics Archive</h2>
+    <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: -0.5rem; margin-bottom: 1.5rem;">
+      A curated archive of high-density visual guides, resource valuation charts, and competitive theorycrafting matrices designed for gaming communities.
+    </p>
+
+    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+      
+      <!-- Showcase 1: BD2 Roadmap -->
+      <div class="card" style="padding: 1.4rem;">
+        <div>
+          <img class="banner" src="assets/infographics/bd2-roadmap-thumb.avif" alt="Brown Dust II Schedule Roadmap" style="aspect-ratio: 16/9; object-fit: cover;">
+          <span class="loc-badge">Brown Dust II · Visual Timeline</span>
+          <h3 style="font-size: 1.15rem; color: #fff; margin: 0.4rem 0;">Multi-Track Update Roadmap</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 1rem;">
+            An information architecture concept synthesizing simultaneous costume banners, shop currency rollover dates, event packs, and client patch notes into a synchronized monthly timeline.
+          </p>
+        </div>
+        <a href="assets/infographics/bd2-roadmap-full.avif" target="_blank" class="btn" style="font-size: 0.82rem; padding: 0.45rem 0.9rem;">View Archive →</a>
+      </div>
+
+      <!-- Showcase 2: Event Shop Priority -->
+      <div class="card" style="padding: 1.4rem;">
+        <div>
+          <img class="banner" src="https://botan14xd.github.io/BD2-Overview/assets/images/season-event/eshop_prio.avif" alt="Event Shop Priority Chart" style="aspect-ratio: 16/9; object-fit: cover;">
+          <span class="loc-badge">Brown Dust II · Economic Hierarchy</span>
+          <h3 style="font-size: 1.15rem; color: #fff; margin: 0.4rem 0;">Event Currency Valuation Matrix</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 1rem;">
+            A visual decision guide mapping in-game event stores by stamina-to-yield efficiency. Organizes high-impact materials, account progression bottlenecks, and low-efficiency currency traps.
+          </p>
+        </div>
+        <a href="https://botan14xd.github.io/BD2-Overview/assets/images/season-event/eshop_prio.avif" target="_blank" class="btn" style="font-size: 0.82rem; padding: 0.45rem 0.9rem;">View Archive →</a>
+      </div>
+
+      <!-- Showcase 3: GxB2 Endgame Meta -->
+      <div class="card" style="padding: 1.4rem;">
+        <div>
+          <img class="banner" src="assets/infographics/gxb2-pvp-thumb.avif" alt="PvP Tier List and Synergy Matrix" style="aspect-ratio: 16/9; object-fit: cover;">
+          <span class="loc-badge">Girls X Battle 2 · Competitive Matrix (Legacy)</span>
+          <h3 style="font-size: 1.15rem; color: #fff; margin: 0.4rem 0;">Endgame Synergy & Build Reference</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 1rem;">
+            Legacy competitive theorycrafting graphic mapping multi-character team synergies, counter-pick matchups, and optimal stat builds (antiques, crystals, potentials) across high-tier PvP play.
+          </p>
+        </div>
+        <a href="assets/infographics/gxb2-pvp-full.avif" target="_blank" class="btn" style="font-size: 0.82rem; padding: 0.45rem 0.9rem;">View Archive →</a>
+      </div>
+
+    </div>
+
+    <!-- Section 3: Video Game Localization Portfolio -->
+    <h2 class="section-title">Video Game Localization & Translation</h2>
+    <div class="loc-grid">
+      <div class="loc-card">
+        <div>
+          <span class="loc-badge">Ukrainian · ~20,000 Words</span>
+          <h3>Outcore: Desktop Adventure</h3>
+          <p>A desktop-interactive puzzle adventure featuring fourth-wall-breaking humor and narrative puzzles. Collaborated on full dialogue localization alongside the PrismaLoc team.</p>
+          <p><a href="https://store.steampowered.com/app/1275670/Outcore_Desktop_Adventure/" class="game-link">Game Link</a></p>
+        </div>
+      </div>
+
+      <div class="loc-card">
+        <div>
+          <span class="loc-badge">Ukrainian · ~20,000 Words</span>
+          <h3>Miss Perfect Miss Ending</h3>
+          <p>An anime-style narrative puzzle game with psychological mystery elements. Full translation covering 24 distinct storyline branches, character voiceover scripts, and environmental puzzles.</p>
+          <p><a href="https://play.google.com/store/apps/details?id=com.genuinestudio.missperfect" class="game-link">Game Link</a></p>
+        </div>
+      </div>
+
+      <div class="loc-card">
+        <div>
+          <span class="loc-badge">Ukrainian · ~6,000 Words</span>
+          <h3>Exponential Idle</h3>
+          <p>A math-inspired incremental strategy game centered on differential equations, exponential scaling models, and variable optimization. Localized game interfaces, upgrades, and mathematical guides.</p>
+          <p><a href="https://play.google.com/store/apps/details?id=com.conicgames.exponentialidle" class="game-link">Game Link</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 4: About the Author & Contact -->
+    <h2 class="section-title">About the Author</h2>
+    <div style="display: flex; align-items: center; gap: 1.8rem; flex-wrap: wrap;">
+      <img src="assets/pfp.png" alt="Profile" style="border-radius: 50%; width: 100px; height: 100px; object-fit: cover; flex-shrink: 0; border: 2px solid var(--border);">
+      
+      <div style="flex: 1; min-width: 260px;">
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0.5rem;">
+          I'm a Ukrainian physicist and technical researcher working across mathematical simulation, data extraction, and interactive web tools. I actively produce open-source documentation, character spreadsheets, and community translations.
+        </p>
+        <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 0.8rem;">
+          Interested in game localization, mathematical modeling, or custom data tooling? Reach out directly:
+        </p>
+        <div class="contact-row">
+          <a class="chip" href="mailto:BotAn14xd@gmail.com">Email</a>
+          <a class="chip" href="https://discord.com/users/559429571288760341/" target="_blank" rel="noopener">Discord</a>
+          <a class="chip" href="http://t.me/botan14xd" target="_blank" rel="noopener">Telegram</a>
+          <a class="chip" href="https://github.com/BotAn14XD" target="_blank" rel="noopener">GitHub</a>
+        </div>
       </div>
     </div>
   </main>
